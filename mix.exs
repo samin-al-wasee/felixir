@@ -42,11 +42,13 @@ defmodule Felixir.MixProject do
       {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.26"},
-      {:jason, "~> 1.2"},
+      {:jason, "~> 1.4"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
       {:dotenvy, "~> 0.8.0"},
-      {:credo, "~> 1.5", only: [:dev, :test]}
+      {:credo, "~> 1.5", only: [:dev, :test]},
+      {:absinthe, "~> 1.7"},
+      {:absinthe_plug, "~> 1.5"},
     ]
   end
 
