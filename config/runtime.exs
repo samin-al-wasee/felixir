@@ -1,4 +1,20 @@
 import Config
+import Dotenvy
+
+# Load environment variables from .env file
+source! ".env"
+
+if config_env() == :dev do
+  # Configure your database
+  config :felixir, Felixir.Repo,
+    username: env!("DATABASE_USERNAME"),
+    password: env!("DATABASE_PASSWORD"),
+    hostname: env!("DATABASE_HOST"),
+    database: env!("DATABASE_NAME"),
+    stacktrace: true,
+    show_sensitive_data_on_connection_error: true,
+    pool_size: 10
+end
 
 # config/runtime.exs is executed for all environments, including
 # during releases. It is executed after compilation and before the
