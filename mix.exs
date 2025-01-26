@@ -49,6 +49,7 @@ defmodule Felixir.MixProject do
       {:credo, "~> 1.5", only: [:dev, :test]},
       {:absinthe, "~> 1.7"},
       {:absinthe_plug, "~> 1.5"},
+      {:argon2_elixir, "~> 4.1"}
     ]
   end
 
